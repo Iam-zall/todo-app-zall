@@ -471,11 +471,3 @@ body {
         transform: translateY(-10px);
     }
 }
-.register-box {
-  margin-bottom: 20px;
-}
-
-.register-box input {
-  width: 100%;
-  margin-bottom: 10px;
-}
