@@ -217,3 +217,14 @@ function escapeHtml(text) {
     div.textContent = text;
     return div.innerHTML;
 }
+// Fungsi Escape HTML untuk prevent XSS
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+const username = localStorage.getItem("username");
+const welcome = document.getElementById("welcome");
+if(username){
+  welcome.textContent = `Halo, ${username} 👋`;
+}
