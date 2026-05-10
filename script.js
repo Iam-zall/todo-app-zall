@@ -217,20 +217,3 @@ function escapeHtml(text) {
     div.textContent = text;
     return div.innerHTML;
 }
-const nameInput = document.getElementById("nameInput");
-const saveBtn = document.getElementById("saveBtn");
-const result = document.getElementById("result");
-
-saveBtn.addEventListener("click", () => {
-  const name = nameInput.value;
-
-  localStorage.setItem("username", name);
-
-  result.textContent = `Halo ${name}`;
-});
-
-const savedName = localStorage.getItem("username");
-
-if (savedName) {
-  result.textContent = `Halo ${savedName}`;
-}
