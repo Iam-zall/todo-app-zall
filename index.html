@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 My Tasks</h1>
+            <p>Kelola tugasmu dengan mudah</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Tambahkan tugas baru..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="btn-add">
+                    <span class="btn-text">Tambah</span>
+                </button>
+            </div>
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="active">Aktif</button>
+                <button class="filter-btn" data-filter="completed">Selesai</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total:</span>
+                <span class="stat-value" id="totalTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Selesai:</span>
+                <span class="stat-value" id="completedTasks">0</span>
+            </div>
+        </div>
+
+        <div id="taskList" class="task-list">
+            <div class="empty-state">
+                <p>📌 Belum ada tugas. Mulai tambahkan tugas baru!</p>
+            </div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Edit Tugas</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input 
+                        type="text" 
+                        id="editInput" 
+                        class="edit-input" 
+                        placeholder="Edit tugas..."
+                    >
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelBtn" class="btn btn-cancel">Batal</button>
+                    <button id="saveBtn" class="btn btn-save">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
